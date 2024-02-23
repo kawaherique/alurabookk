@@ -1,26 +1,59 @@
-@import url("styles/header.css");
-@import url("styles/banner.css");
-@import url("styles/carrossel.css");
-@import url("styles/topicos.css");
-@import url("styles/contato.css");
-@import url("styles/rodapé.css");
+@import url('https://fonts.googleapis.com/css?family=Chakra+Petch:wght@400;700&display=swap');
 
 :root {
-    --cor-de-fundo: #EBECEE;
-    --branco: #FFFFFF;
-    --laranja: #EB9B00;
-    --azul-degrade: linear-gradient(97.54deg, #002F52 35.49%, #326589 165.37%);
-    --fonte-principal: "Poppins";
-    --azul: #002F52;
-    --fonte-secundario: "Josefin Sans";
-    --preto: #000000;
-    --cinza: #474646;
-    --cinza-claro: #858585;
+  --cor-de-fundo: #09030c;
+  --verde: #26e27b;
+  --branco: #FFFFFF;
+  --botao-ativo: #20b463;
+  --botao-inativo: rgba(98, 32, 185, 0.5);
+  --texto-fundo: rgba(58, 55, 94, 0.3);
+}
+body {
+  background-color: var(--cor-de-fundo);
+  color: var(--branco);
+  font-family: 'Chakra Petch', sans-serif;
+}
+.conteudo-principal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+.titulo-principal {
+    text-align: left;
+    width: 100%;
+    font-size: 32px;
+}
+.titulo-principal span {
+    color: var(--verde);
+}
+.botao {
+    font-family: "Crakra Petch", sans-serif;
+    background-color: var(--botao-inativo);
+    color: var(--branco);
+    display: flex;
+    justify-content: center;
+    padding: 1em;
+    font-size: 18px;
+    align-items: center;
+    width: 100%;
+    border-bottom: 4px solid var(--botao-ativo);
+    border-left: 2px solid var(--botao-ativo);
+    border-right: 2px solid var(--botao-ativo);
+    border-top: none;
+}
+.botoes {
+    display: block;
 }
 
-body {
-    background-color: var(--cor-de-fundo);
-    font-family: var(--fonte-principal);
-    font-size: 16px;
-    font-weight: 400;
+@media screen and (min-width: 768px) {
+    .botoes {
+        display: flex;
+    }
+}
+.botao:first-child {
+    border-radius: 40px 40px 0 0;
 }
